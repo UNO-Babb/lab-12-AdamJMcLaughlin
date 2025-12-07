@@ -1,44 +1,51 @@
 Name:
 
-Number of elements:
+Number of elements:10000 and 100000
 
 Bubble Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 3.62901 and 235.91840 seconds 
+Reversed: 5.99706 and 568.40969 seconds
+Random: 4.58373 and 469.99806 seconds 
 
 Bubble Sort Early Exit
-Sorted:
-Reversed:
-Random:
+Sorted: 0.00054 and 0.00442 
+Reversed: 5.71022 and 575.15131 
+Random: 4.48095 and 487.37875 
 
 Selection Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 2.10203 and 202.05925 seconds 
+Reversed: 1.80070 and 207.52124 seconds 
+Random: 1.90680 and 255.68332 seconds 
 
 Insertion Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 0.00094 and 0.01390 seconds
+Reversed: 3.68559 and 362.97242 seconds
+Random: 1.88216 and 229.49431 seconds
 
 Merge Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 0.02710 and 0.19738 seconds
+Reversed: 0.01739 and 0.20623 seconds
+Random: 0.01901 and 0.24148 seconds
 
 Questions to answer:
 1) What was the worst case scenario for any sorting technique?
-
+    BUBBLE SORT TOOK THE LONGEST
 
 2) The first 3 sorts have the same runtime of O(n^2). Why were the times different? Why would one be more efficient than the others?
-
+    ITS HOW THE ALGORITHM IS FUNCTIONING BUBBLE SORT JUST COMPARES TWO NUMBERS DOWN THE LIST AND THERE ENDS UP MORE PROCESSES AND IS RUN SO MANY TIMES.
+    SELECTION SORT RUNS AND FINDS THE LARGEST NUMBER AND REPEATS WHILE THE LIST GETS SHORTER MAKING IT MORE EFFICIENT.
 
 3) Why was merge sort so much more efficient?
-
+    BECAUSE OF ITS DIVIDE AND CONQUER STRATEGY IT SPLITS THE ARRAY INTO SMALLER SUBARRAYS, SORTS THEM INDIVIDUALLY AND THEN MERGES THEM 
+    BACK. MERGE SORT ALWAYS RUNS O(NLOGN) THIS PREDICTABILITY WHERE PERFORMANCE CONSISTENCY IS CRITICAL. IT IS ALSO STABLE  WHICH PRESERVES THE 
+    RELATIVE ORDER  OF EQUAL ELEMENTS.
 
 4) The built-in sorting technique for most programming languages is known as TimSort.
 This is a merge sort until the arrays have fewer than 10 elements, then it does an insertion sort. Why would this be useful?
-
+    Insertion sort is slower in theory, but it becomes faster for very small arrays. Combining it with merge sort makes the overall 
+    algorithm more efficient.
 
 5) What issues can you see with a recursive sorting technique like merge sort?
+    Extra memory usage and function call overhead can slow things down, as each recursive call adds overhead. Deep recursion may also 
+    lead to stack overflow, causing runtime errors. Merge sort is beneficial, but its recursive nature and inefficiency on small inputs 
+    are why hybrid algorithms like TimSort switch to insertion sort for small chunks.
